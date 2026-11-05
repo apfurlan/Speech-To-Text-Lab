@@ -12,4 +12,15 @@ data/audio/*
 !data/audio/.gitkeep
 data/references/*
 !data/references/.gitkeep
-data/generated/
+data/generated/*
+!data/generated/pix-pilot/
+data/generated/pix-pilot/*
+!data/generated/pix-pilot/audio/
+!data/generated/pix-pilot/references/
+!data/generated/pix-pilot/manifest.json
+data/generated/pix-pilot/audio/*
+!data/generated/pix-pilot/audio/pix_000[1-9].wav
+!data/generated/pix-pilot/audio/pix_0010.wav
+data/generated/pix-pilot/references/*
+!data/generated/pix-pilot/references/pix_000[1-9].txt
+!data/generated/pix-pilot/references/pix_0010.txt

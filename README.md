@@ -70,7 +70,8 @@ Guarde os originais separadamente e não use o mesmo caminho na entrada e saída
 da conversão. Não há captura de microfone nesta versão.
 
 Modelos, áudios, referências e resultados locais são ignorados pelo Git por
-padrão. Nenhuma gravação humana é distribuída; o piloto sintético pode ser gerado localmente.
+padrão, com uma exceção: os dez WAVs do piloto Pix, seus TXT e manifesto estão
+versionados em `data/generated/pix-pilot/`. Nenhuma gravação humana é distribuída.
 Versione apenas exemplos pequenos e autorizados, com licença e consentimento
 adequados. Não inclua gravações pessoais ou sensíveis indiscriminadamente.
 
@@ -138,6 +139,10 @@ Não há geração automática de 100 ou 1.000 nesta etapa. Primeiro, ouça os d
 e confira a pronúncia de "pix", dos valores e das expressões abreviadas.
 O laboratório não faz transferências nem se conecta a serviços bancários.
 
+Os dez áudios já estão incluídos no repositório: basta abrir os WAVs em um player.
+Não é necessário instalar Piper ou baixar a voz para ouvi-los. Modelos, resultados
+de transcrição e outros lotes gerados continuam ignorados pelo Git.
+
 Os três primeiros exemplos são:
 
 | Arquivo | Texto falado | Valor esperado |
@@ -172,13 +177,16 @@ informa CC0 para o dataset de treinamento, mas não especifica uma licença sepa
 para os pesos. Confira os termos da voz antes de redistribuir modelo ou corpus;
 a licença do motor não deve ser confundida com a do modelo ou dos áudios produzidos.
 
-### Gerar e inspecionar
+### Gerar novamente e inspecionar
+
+Para produzir uma nova síntese sem sobrescrever o piloto versionado:
 
 ```bash
-uv run --extra tts stt-generate --voice models/pt_BR-cadu-medium.onnx
+uv run --extra tts stt-generate --voice models/pt_BR-cadu-medium.onnx \
+  --output data/generated/pix-pilot-v2
 ```
 
-Saída padrão, ignorada pelo Git:
+Piloto incluído no Git (a nova síntese acima fica em `pix-pilot-v2/`, ignorada):
 
 ```text
 data/generated/pix-pilot/
