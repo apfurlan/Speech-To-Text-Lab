@@ -39,8 +39,8 @@ def run(
     if output.suffix.lower() != ".json":
         message = "a saída deve ter extensão .json"
         raise typer.BadParameter(message, param_hint="--output")
-    if not (model / "am" / "final.mdl").is_file():
-        message = "selecione a pasta extraída que contém am/final.mdl"
+    if not any(path.is_file() for path in (model / "am" / "final.mdl", model / "final.mdl")):
+        message = "selecione a pasta extraída que contém am/final.mdl ou final.mdl"
         raise typer.BadParameter(message, param_hint="--model")
     if source.is_file():
         files = [source] if source.suffix.lower() == ".wav" else []
