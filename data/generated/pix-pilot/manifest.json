@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "engine": "piper",
+  "engine_version": "1.8.0",
+  "voice": "pt_BR-cadu-medium.onnx",
+  "voice_sha256": "765f0809a6ea9035d4a6d0d008dbf8876e68b2dd32029312672fa8f405bdb535",
+  "voice_config_sha256": "5fe03aa3d4901880554905b12075713cd552598c8a350455a1ec73f8b4e6be19",
+  "language": "pt-BR",
+  "currency": "BRL",
+  "sample_rate_hz": 16000,
+  "human_reviewed": false,
+  "samples": [
+    {
+      "id": "pix_0001",
+      "text": "Faça um pix no valor de dez reais e vinte centavos.",
+      "amount_cents": 1020,
+      "audio_path": "audio/pix_0001.wav",
+      "reference_path": "references/pix_0001.txt",
+      "duration_seconds": 3.993875,
+      "audio_sha256": "a72eb919b74dfeeff263447a8e890bd001187539c99b26168ccb229197ab8ac8"
+    },
+    {
+      "id": "pix_0002",
+      "text": "Pix no valor de dez e vinte.",
+      "amount_cents": 1020,
+      "audio_path": "audio/pix_0002.wav",
+      "reference_path": "references/pix_0002.txt",
+      "duration_seconds": 2.61225,
+      "audio_sha256": "2a01338b8d9ced1a3ce6116331ecd5e2b5f64ad2cb4f9bd65a9185f12fdb42f4"
+    },
+    {
+      "id": "pix_0003",
+      "text": "Fazer um pix no valor de trinta com quarenta.",
+      "amount_cents": 3040,
+      "audio_path": "audio/pix_0003.wav",
+      "reference_path": "references/pix_0003.txt",
+      "duration_seconds": 3.2740625,
+      "audio_sha256": "a911a17a02f6cd73bc4c6805095d5486b365481e648e5237c613b31ff996bf15"
+    },
+    {
+      "id": "pix_0004",
+      "text": "Faça um pix de um real.",
+      "amount_cents": 100,
+      "audio_path": "audio/pix_0004.wav",
+      "reference_path": "references/pix_0004.txt",
+      "duration_seconds": 1.9853125,
+      "audio_sha256": "e0dcc7e57abfd0ad18e5ee04d41962c31813728b1078152d418215e078380775"
+    },
+    {
+      "id": "pix_0005",
+      "text": "Quero fazer um pix de um real e um centavo.",
+      "amount_cents": 101,
+      "audio_path": "audio/pix_0005.wav",
+      "reference_path": "references/pix_0005.txt",
+      "duration_seconds": 3.2391875,
+      "audio_sha256": "8db31d2e00664f2ca1f1f05646829501120497a35c2f148be7843b12bd39036d"
+    },
+    {
+      "id": "pix_0006",
+      "text": "Pix de dez reais e cinco centavos.",
+      "amount_cents": 1005,
+      "audio_path": "audio/pix_0006.wav",
+      "reference_path": "references/pix_0006.txt",
+      "duration_seconds": 3.1115,
+      "audio_sha256": "1c1a46ba11719f65a352e5e7560454e2c7664248fc1c42f3401d8d3cab9094da"
+    },
+    {
+      "id": "pix_0007",
+      "text": "Faz um pix de cinquenta reais.",
+      "amount_cents": 5000,
+      "audio_path": "audio/pix_0007.wav",
+      "reference_path": "references/pix_0007.txt",
+      "duration_seconds": 2.705125,
+      "audio_sha256": "8ce64e9de705609c9245c2a55fbc93c09dbe3def9e8a035c50dc41f5390fd597"
+    },
+    {
+      "id": "pix_0008",
+      "text": "Envie um pix no valor de cem reais e noventa e nove centavos.",
+      "amount_cents": 10099,
+      "audio_path": "audio/pix_0008.wav",
+      "reference_path": "references/pix_0008.txt",
+      "duration_seconds": 4.8181875,
+      "audio_sha256": "19f4a56aa4aed189a6e44e3a0d7c7df7129e5be04b1823b4f0eebf25f6954116"
+    },
+    {
+      "id": "pix_0009",
+      "text": "Faça um pix de noventa e nove centavos.",
+      "amount_cents": 99,
+      "audio_path": "audio/pix_0009.wav",
+      "reference_path": "references/pix_0009.txt",
+      "duration_seconds": 3.4365625,
+      "audio_sha256": "e86d508bf9e9c282762d258879936439fa08145f4cbdbcc63984d64223c8a27f"
+    },
+    {
+      "id": "pix_0010",
+      "text": "Fazer um pix no valor de mil duzentos e trinta e quatro reais e cinquenta e seis centavos.",
+      "amount_cents": 123456,
+      "audio_path": "audio/pix_0010.wav",
+      "reference_path": "references/pix_0010.txt",
+      "duration_seconds": 6.2345625,
+      "audio_sha256": "4fee44245ab8082fbda885010ccf2071322eef714e78ddf7aa17927c87b1c8da"
+    }
+  ]
+}
