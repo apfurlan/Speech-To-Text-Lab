@@ -24,6 +24,8 @@ class Prompt(BaseModel):
     model_config: ClassVar[ConfigDict] = ConfigDict(frozen=True, strict=True, extra="forbid")
     id: str = Field(pattern=r"^pix_[0-9]{4}$")
     text: str = Field(min_length=1)
+    reference_text: str = Field(min_length=1)
+    op: Literal["PIX"]
     amount_cents: int = Field(gt=0)
 
 
@@ -47,7 +49,7 @@ class Manifest(BaseModel):
     """Proveniência do piloto e rótulos para futura avaliação semântica."""
 
     model_config: ClassVar[ConfigDict] = ConfigDict(frozen=True)
-    schema_version: int = 1
+    schema_version: int = 2
     engine: Literal["piper"] = "piper"
     engine_version: str
     voice: str
@@ -131,13 +133,17 @@ def run(
                     check=True,
                     capture_output=True,
                 )
-                _ = (staging / reference_relative).write_text(prompt.text + "\n", encoding="utf-8")
+                _ = (staging / reference_relative).write_text(
+                    prompt.reference_text + "\n", encoding="utf-8"
+                )
                 with wave.open(str(audio_path), "rb") as audio:
                     duration = audio.getnframes() / audio.getframerate()
                 samples.append(
                     GeneratedSample(
                         id=prompt.id,
                         text=prompt.text,
+                        reference_text=prompt.reference_text,
+                        op=prompt.op,
                         amount_cents=prompt.amount_cents,
                         audio_path=audio_relative,
                         reference_path=reference_relative,
