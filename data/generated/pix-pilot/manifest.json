@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "engine": "piper",
   "engine_version": "1.8.0",
   "voice": "pt_BR-cadu-medium.onnx",
@@ -13,6 +13,8 @@
     {
       "id": "pix_0001",
       "text": "Faça um pix no valor de dez reais e vinte centavos.",
+      "reference_text": "Faça um pix no valor de dez reais e vinte centavos.",
+      "op": "PIX",
       "amount_cents": 1020,
       "audio_path": "audio/pix_0001.wav",
       "reference_path": "references/pix_0001.txt",
@@ -22,6 +24,8 @@
     {
       "id": "pix_0002",
       "text": "Pix no valor de dez e vinte.",
+      "reference_text": "Pix no valor de dez e vinte.",
+      "op": "PIX",
       "amount_cents": 1020,
       "audio_path": "audio/pix_0002.wav",
       "reference_path": "references/pix_0002.txt",
@@ -31,6 +35,8 @@
     {
       "id": "pix_0003",
       "text": "Fazer um pix no valor de trinta com quarenta.",
+      "reference_text": "Fazer um pix no valor de trinta com quarenta.",
+      "op": "PIX",
       "amount_cents": 3040,
       "audio_path": "audio/pix_0003.wav",
       "reference_path": "references/pix_0003.txt",
@@ -40,6 +46,8 @@
     {
       "id": "pix_0004",
       "text": "Faça um pix de um real.",
+      "reference_text": "Faça um pix de um real.",
+      "op": "PIX",
       "amount_cents": 100,
       "audio_path": "audio/pix_0004.wav",
       "reference_path": "references/pix_0004.txt",
@@ -49,6 +57,8 @@
     {
       "id": "pix_0005",
       "text": "Quero fazer um pix de um real e um centavo.",
+      "reference_text": "Quero fazer um pix de um real e um centavo.",
+      "op": "PIX",
       "amount_cents": 101,
       "audio_path": "audio/pix_0005.wav",
       "reference_path": "references/pix_0005.txt",
@@ -58,6 +68,8 @@
     {
       "id": "pix_0006",
       "text": "Pix de dez reais e cinco centavos.",
+      "reference_text": "Pix de dez reais e cinco centavos.",
+      "op": "PIX",
       "amount_cents": 1005,
       "audio_path": "audio/pix_0006.wav",
       "reference_path": "references/pix_0006.txt",
@@ -67,6 +79,8 @@
     {
       "id": "pix_0007",
       "text": "Faz um pix de cinquenta reais.",
+      "reference_text": "Faz um pix de cinquenta reais.",
+      "op": "PIX",
       "amount_cents": 5000,
       "audio_path": "audio/pix_0007.wav",
       "reference_path": "references/pix_0007.txt",
@@ -76,6 +90,8 @@
     {
       "id": "pix_0008",
       "text": "Envie um pix no valor de cem reais e noventa e nove centavos.",
+      "reference_text": "Envie um pix no valor de cem reais e noventa e nove centavos.",
+      "op": "PIX",
       "amount_cents": 10099,
       "audio_path": "audio/pix_0008.wav",
       "reference_path": "references/pix_0008.txt",
@@ -85,6 +101,8 @@
     {
       "id": "pix_0009",
       "text": "Faça um pix de noventa e nove centavos.",
+      "reference_text": "Faça um pix de noventa e nove centavos.",
+      "op": "PIX",
       "amount_cents": 99,
       "audio_path": "audio/pix_0009.wav",
       "reference_path": "references/pix_0009.txt",
@@ -94,6 +112,8 @@
     {
       "id": "pix_0010",
       "text": "Fazer um pix no valor de mil duzentos e trinta e quatro reais e cinquenta e seis centavos.",
+      "reference_text": "Fazer um pix no valor de mil duzentos e trinta e quatro reais e cinquenta e seis centavos.",
+      "op": "PIX",
       "amount_cents": 123456,
       "audio_path": "audio/pix_0010.wav",
       "reference_path": "references/pix_0010.txt",

@@ -157,6 +157,25 @@ usa inteiros: `1020` representa R$ 10,20, sem problemas de ponto flutuante.
 Nos dois exemplos abreviados, a interpretação é uma convenção do corpus, não uma
 garantia de que um comando real seja inequívoco. A extração de valores ainda não existe.
 
+Cada exemplo do catálogo contém o texto da síntese (`text`), a transcrição esperada
+(`reference_text`), a operação esperada (`op`) e o valor em centavos (`amount_cents`):
+
+```json
+{
+  "id": "pix_0001",
+  "text": "Faça um pix no valor de dez reais e vinte centavos.",
+  "reference_text": "Faça um pix no valor de dez reais e vinte centavos.",
+  "op": "PIX",
+  "amount_cents": 1020
+}
+```
+
+`text` é enviado ao Piper; `reference_text` é a referência para a futura comparação
+com o Speech-To-Text. Neste piloto eles coincidem, mas são campos independentes.
+Cada áudio tem sua própria referência literal, mesmo quando frases diferentes
+representam a mesma operação e o mesmo valor. `op` e `amount_cents` são rótulos
+esperados do corpus, não resultados de extração ou instruções para fazer pagamentos.
+
 ### Instalar sintetizador e voz
 
 O gerador usa [Piper](https://github.com/OHF-Voice/piper1-gpl) local, em CPU,
@@ -195,8 +214,9 @@ data/generated/pix-pilot/
   manifest.json
 ```
 
-Cada TXT contém o texto enviado ao sintetizador, ainda sujeito a revisão auditiva.
-O manifesto inclui valores esperados, versão do motor, hashes SHA-256 da voz,
+Cada TXT contém `reference_text`, ainda sujeito a revisão auditiva.
+O manifesto, agora com `schema_version: 2`, inclui `text`, `reference_text`, `op`,
+valores esperados, versão do motor, hashes SHA-256 da voz,
 configuração e WAVs, duração e caminhos relativos à raiz do piloto.
 `human_reviewed: false` registra que a síntese não é uma referência humana validada.
 
